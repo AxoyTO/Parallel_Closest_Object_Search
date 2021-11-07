@@ -1,0 +1,8 @@
+#SWP
+~*
+
+#IDE
+*.idea
+
+#Cache
+*__pycache__
