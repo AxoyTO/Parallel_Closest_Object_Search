@@ -142,16 +142,17 @@ obj2 = np.array([(2.0, 0.0),
 # print('Scipy (cube2, cube1): ', directed_hausdorff(cube2, cube1)[0])
 # print('Scipy: ', max(directed_hausdorff(obj1, obj2)[0], directed_hausdorff(obj2, obj1)[0]))
 
-print('Hausdorff Distance (obj1, obj2): ', HausdorffDistance(obj1, obj2))
-print('Scipy (obj1, obj2): ', directed_hausdorff(obj1, obj2)[0])
-print('Hausdorff Distance (obj2, obj1): ', HausdorffDistance(obj2, obj1))
-print('Scipy (obj2, obj1): ', directed_hausdorff(obj2, obj1)[0])
-print('Hausdorff Distance: ', max(HausdorffDistance(obj1, obj2), HausdorffDistance(obj2, obj1)))
-print('Scipy: ', max(directed_hausdorff(obj1, obj2)[0], directed_hausdorff(obj2, obj1)[0]))
+if __name__ == 'NaiveHDD.py':
+    print('Hausdorff Distance (obj1, obj2): ', HausdorffDistance(obj1, obj2))
+    print('Scipy (obj1, obj2): ', directed_hausdorff(obj1, obj2)[0])
+    print('Hausdorff Distance (obj2, obj1): ', HausdorffDistance(obj2, obj1))
+    print('Scipy (obj2, obj1): ', directed_hausdorff(obj2, obj1)[0])
+    print('Hausdorff Distance: ', max(HausdorffDistance(obj1, obj2), HausdorffDistance(obj2, obj1)))
+    print('Scipy: ', max(directed_hausdorff(obj1, obj2)[0], directed_hausdorff(obj2, obj1)[0]))
 
 '''
 TODO:
-    1) Улучшить реализацию алгоритма NaiveHDD -> EarlyBreak.
-    2) Выучить как перевести модель в матрицу и попробовать с разными моделями.
+    1) Улучшить реализацию алгоритма NaiveHDD -> EarlyBreak. + 
+    2) Выучить как перевести модель в матрицу и попробовать с разными моделями. +
     3) Увеличить количество сеток в моделях и стараться ускориться с помощью параллелизации 
 '''
