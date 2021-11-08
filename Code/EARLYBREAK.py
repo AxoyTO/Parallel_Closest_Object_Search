@@ -79,8 +79,6 @@ if __name__ == "__main__":
     NaiveHDD_time = end - start
     print(f"NaiveHDD Result: {NaiveHDD_result}")
     print(f"NaiveHDD Elapsed Time: {NaiveHDD_time :.5f} seconds.")
-
-    print(tank1_vertices.shape)
     start = time.time()
     EARLYBREAK_result = EARLYBREAK(tank1_vertices[0:1000], tank2_vertices[0:1000], euclidean)
     end = time.time()
