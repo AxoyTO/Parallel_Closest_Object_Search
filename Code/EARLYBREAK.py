@@ -7,9 +7,9 @@ from scipy.spatial.distance import directed_hausdorff
 
 def print_info(model):
     print(f"Vertices: {len(get_vertices(model))}")
-    print(f"Faces: {len(model.vectors)}")
-    print(f"Shape: {np.shape(model.vectors)}")
-    print(f"Normals: {len(model.normals)}")
+    # print(f"Faces: {len(model.vectors)}")
+    # print(f"Shape: {np.shape(model.vectors)}")
+    # print(f"Normals: {len(model.normals)}")
     print("----------------------------")
 
 
