@@ -1,5 +1,10 @@
 #SWP
 ~*
+/Results/S_23*
+
+#DevTools
+*/CMakeLists.txt
+*/cmake-build-debug/*
 
 #IDE
 *.idea
@@ -17,3 +22,4 @@
 */PyMesh
 /PDFs
 /Inter*
+*/MyPy*/*
