@@ -143,7 +143,6 @@ if __name__ == "__main__":
         comm.barrier()
 
         for i in range(len(models)):
-            print(i)
             split[i] = splits[i][0]
 
     else:
