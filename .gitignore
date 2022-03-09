@@ -21,6 +21,7 @@
 #Directories
 /Modules/*
 */Models/off
+*/Models/original
 */MPI_Tests
 */PyMesh
 /PDFs
