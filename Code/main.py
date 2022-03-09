@@ -1,5 +1,6 @@
 import os
 import numpy as np
+import sys
 import time
 import trimesh
 from hausdorff import *
@@ -74,18 +75,46 @@ if __name__ == "__main__":
         print("==================================")
         dir = os.getcwd()
 
-        models = ["GoldenRetriever", "Wolf", "Lion"]
-        fixed_model = models.index("GoldenRetriever")
+        models = [
+            "GoldenRetriever",
+            "Wolf",
+            "Horse",
+            "Lion",
+            "Eagle",
+            "Dolphin",
+            "Bull",
+            "Dog",
+            "Camel",
+            "Giraffe",
+            "Human",
+        ]
+        fixed_model = models.index("Human")
 
-        print(models)
         for i in range(len(models)):
-            models[i] = trimesh.load(dir + f"/Models/{models[i]}.stl", force="mesh")
+            try:
+                if os.path.exists(dir + f"/Models/{models[i]}.stl"):
+                    print(f"{models[i]}.stl found and loaded!")
+                    models[i] = trimesh.load(
+                        dir + f"/Models/{models[i]}.stl", force="mesh"
+                    )
+                elif os.path.exists(dir + f"/Models/{models[i]}.off"):
+                    print(f"{models[i]}.off found and loaded!")
+                    models[i] = trimesh.load(
+                        dir + f"/Models/{models[i]}.off", force="mesh"
+                    )
+                else:
+                    raise Exception
+
+            except:
+                print(f"There is no file {models[i]} with extension .STL or .OFF!")
+                comm.Abort(1)
+                exit()
 
         for i in range(len(models)):
             models[i] = np.array(models[i].vertices)
 
-        for i in models:
-            print(i.shape)
+        # for i in models:
+        #    print(i.shape)
 
         print("---------------------------------------------------")
         execute_in_serial()
@@ -110,7 +139,6 @@ if __name__ == "__main__":
 
             for j in range(len(models)):
                 comm.send(splits[j][i], dest=i, tag=i)
-        #      print(f"Process {rank} sent split model_{j} part {i} to process {i}")
 
         comm.barrier()
 
@@ -120,12 +148,10 @@ if __name__ == "__main__":
     else:
         fixed_model = comm.recv(source=0)
         models = comm.recv(source=0)
-        # print(f"Process {rank} received models!")
         split = [0] * len(models)
         for i in range(len(models)):
             split[i] = comm.recv(source=0)
             split[i] = np.array(split[i])
-            # print(f"Process {rank} received split model_{i+1} of shape {split[i].shape}")
         comm.barrier()
 
     results = [0] * len(models)
