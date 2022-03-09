@@ -15,9 +15,12 @@
 #File Types
 *.m
 *.mp4
+*.zip
+*.txt
 
 #Directories
 /Modules/*
+*/Models/off
 */MPI_Tests
 */PyMesh
 /PDFs
