@@ -44,6 +44,7 @@ def calculate_with_different_metrics(A, B):
 
 
 def execute_in_serial():
+    print("---------------------   SERIAL   ---------------------")
     start = time.time()
     for i in range(len(models)):
         if fixed_model != i:
@@ -55,6 +56,7 @@ def execute_in_serial():
 
 
 def execute_scipy_hd():
+    print("---------------------   SCIPY   ---------------------")
     for i in range(len(models)):
         if fixed_model != i:
             print(
@@ -67,7 +69,6 @@ if __name__ == "__main__":
     comm = MPI.COMM_WORLD
     world_size = comm.Get_size()
     rank = comm.Get_rank()
-    split = [0] * world_size
 
     if rank == 0:
         print("==================================")
@@ -89,6 +90,9 @@ if __name__ == "__main__":
             "Human",
         ]
         fixed_model = models.index("Human")
+        print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
+
+        split = [0] * len(models)
 
         for i in range(len(models)):
             try:
@@ -116,11 +120,9 @@ if __name__ == "__main__":
         # for i in models:
         #    print(i.shape)
 
-        print("---------------------------------------------------")
-        execute_in_serial()
-        print("---------------------------------------------------")
+        # execute_in_serial()
         execute_scipy_hd()
-        print("---------------------------------------------------")
+        print("---------------------   PARALLEL   ---------------------")
 
         splits = []
 
@@ -141,6 +143,7 @@ if __name__ == "__main__":
         comm.barrier()
 
         for i in range(len(models)):
+            print(i)
             split[i] = splits[i][0]
 
     else:
