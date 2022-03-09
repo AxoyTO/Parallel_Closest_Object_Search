@@ -130,7 +130,6 @@ if __name__ == "__main__":
             splits.append(np.array_split(models[i], world_size, axis=0))
 
         splits = np.array(splits, dtype=object)
-        print(splits.shape)
 
         start = MPI.Wtime()
         for i in range(1, world_size):
