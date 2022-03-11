@@ -27,3 +27,4 @@
 /PDFs
 /Inter*
 */MyPy*/*
+*.vscode/*
