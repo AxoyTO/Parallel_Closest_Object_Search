@@ -117,9 +117,6 @@ if __name__ == "__main__":
         for i in range(len(models)):
             models[i] = np.array(models[i].vertices)
 
-        # for i in models:
-        #    print(i.shape)
-
         # execute_in_serial()
         execute_scipy_hd()
         print("---------------------   PARALLEL   ---------------------")
@@ -165,12 +162,9 @@ if __name__ == "__main__":
 
     if rank == 0:
         end = MPI.Wtime()
-        print("---------------------------------------------------")
         for i in range(len(results)):
             if results[i] != 0:
                 print(f"MPI M{fixed_model+1} <-> M{i+1}: {results[i]:.6f}")
         print(f"Parallel Elapsed Time: {end - start :.5f} seconds.")
         print("---------------------------------------------------")
     MPI.Finalize()
-
-# TODO: передать модели по разным процессам и между ними вычислять расстояние
