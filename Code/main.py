@@ -89,7 +89,7 @@ if __name__ == "__main__":
             "Giraffe",
             "Human",
         ]
-        fixed_model = models.index("Human")
+        fixed_model = models.index("GoldenRetriever")
         print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
 
         split = [0] * len(models)
@@ -97,9 +97,12 @@ if __name__ == "__main__":
         for i in range(len(models)):
             try:
                 if os.path.exists(dir + f"/Models/{models[i]}.stl"):
-                    print(f"{models[i]}.stl found and loaded!")
+                    print(f"{models[i]}.stl with", end="")
                     models[i] = trimesh.load(
                         dir + f"/Models/{models[i]}.stl", force="mesh"
+                    )
+                    print(
+                        f" {models[i].vertices.shape[0]} vertices is found and loaded!"
                     )
                 elif os.path.exists(dir + f"/Models/{models[i]}.off"):
                     print(f"{models[i]}.off found and loaded!")
@@ -118,7 +121,7 @@ if __name__ == "__main__":
             models[i] = np.array(models[i].vertices)
 
         # execute_in_serial()
-        execute_scipy_hd()
+        # execute_scipy_hd()
         print("---------------------   PARALLEL   ---------------------")
 
         splits = []
