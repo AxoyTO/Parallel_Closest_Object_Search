@@ -91,6 +91,7 @@ if __name__ == "__main__":
         ]
         fixed_model = models.index("GoldenRetriever")
         print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
+        print("--------------------------------------------------------")
 
         split = [0] * len(models)
 
