@@ -366,3 +366,2792 @@ PS:
 
 Read file <result.err> for stderr output of this job.
 
+Sender: LSF System <lsfadmin@polus-c1-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872729: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 14:57:10 2022
+Job was executed on host(s) <20*polus-c1-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 14:57:10 2022
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Tue Mar 15 14:57:10 2022
+Terminated at Tue Mar 15 16:57:32 2022
+Results reported at Tue Mar 15 16:57:32 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   12680.00 sec.
+    Max Memory :                                 2372 MB
+    Average Memory :                             244.22 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              29
+    Max Threads :                                89
+    Run time :                                   7228 sec.
+    Turnaround time :                            7222 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 5962.66294 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 629.60205 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 312.38361 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 158.05037 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 83.76831 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 44.45624 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872730: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 14:57:51 2022
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 16:57:32 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Tue Mar 15 16:57:32 2022
+Terminated at Tue Mar 15 17:39:00 2022
+Results reported at Tue Mar 15 17:39:00 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   7977.42 sec.
+    Max Memory :                                 2360 MB
+    Average Memory :                             395.24 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                69
+    Run time :                                   2495 sec.
+    Turnaround time :                            9669 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 1238.55931 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 635.85972 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 312.61554 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 157.44566 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 82.12354 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Wolf. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M2 <-> M1: 3.708501
+MPI M2 <-> M3: 14.143968
+MPI M2 <-> M4: 11.963168
+MPI M2 <-> M5: 7.348312
+MPI M2 <-> M6: 18.627377
+MPI M2 <-> M7: 10.534774
+MPI M2 <-> M8: 6.196802
+MPI M2 <-> M9: 9.586825
+MPI M2 <-> M10: 13.231010
+MPI M2 <-> M11: 18.513230
+Parallel Elapsed Time: 45.17966 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872738: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 21:03:54 2022
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Mar 15 21:03:55 2022
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Tue Mar 15 21:03:55 2022
+Terminated at Tue Mar 15 23:09:54 2022
+Results reported at Tue Mar 15 23:09:54 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   23692.00 sec.
+    Max Memory :                                 3767 MB
+    Average Memory :                             402.60 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              37
+    Max Threads :                                333
+    Run time :                                   7562 sec.
+    Turnaround time :                            7560 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 3805.07022 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 1904.85754 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 959.87149 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 481.52929 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 252.37853 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Horse. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M3 <-> M1: 11.017976
+MPI M3 <-> M2: 14.143968
+MPI M3 <-> M4: 26.085691
+MPI M3 <-> M5: 16.468079
+MPI M3 <-> M6: 6.705207
+MPI M3 <-> M7: 7.904030
+MPI M3 <-> M8: 8.064584
+MPI M3 <-> M9: 13.836763
+MPI M3 <-> M10: 16.402566
+MPI M3 <-> M11: 4.436152
+Parallel Elapsed Time: 135.40666 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872739: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 10:14:38 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 10:14:38 2022
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 10:14:38 2022
+Terminated at Wed Mar 16 10:22:22 2022
+Results reported at Wed Mar 16 10:22:22 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1691.64 sec.
+    Max Memory :                                 2360 MB
+    Average Memory :                             425.72 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                1289
+    Run time :                                   470 sec.
+    Turnaround time :                            464 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 225.50916 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 113.95151 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 57.76196 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 29.09799 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 15.26686 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Lion. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M4 <-> M1: 15.069315
+MPI M4 <-> M2: 11.963168
+MPI M4 <-> M3: 26.085691
+MPI M4 <-> M5: 13.412691
+MPI M4 <-> M6: 30.326366
+MPI M4 <-> M7: 21.746664
+MPI M4 <-> M8: 18.150806
+MPI M4 <-> M9: 18.257642
+MPI M4 <-> M10: 20.360185
+MPI M4 <-> M11: 30.473041
+Parallel Elapsed Time: 9.02159 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872740: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 13:36:15 2022
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 13:36:16 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 13:36:16 2022
+Terminated at Wed Mar 16 14:27:55 2022
+Results reported at Wed Mar 16 14:27:55 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9890.00 sec.
+    Max Memory :                                 2372 MB
+    Average Memory :                             396.02 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              25
+    Max Threads :                                845
+    Run time :                                   3101 sec.
+    Turnaround time :                            3100 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 1552.02189 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 782.59692 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 391.79864 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 198.25934 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 104.86624 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Eagle. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M5 <-> M1: 8.810160
+MPI M5 <-> M2: 7.348312
+MPI M5 <-> M3: 16.468079
+MPI M5 <-> M4: 13.412691
+MPI M5 <-> M6: 19.365057
+MPI M5 <-> M7: 15.565144
+MPI M5 <-> M8: 10.072918
+MPI M5 <-> M9: 15.235411
+MPI M5 <-> M10: 18.560316
+MPI M5 <-> M11: 19.901475
+Parallel Elapsed Time: 56.57832 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872741: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 15:08:28 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 15:08:28 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 15:08:28 2022
+Terminated at Wed Mar 16 17:53:23 2022
+Results reported at Wed Mar 16 17:53:23 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   31052.00 sec.
+    Max Memory :                                 3767 MB
+    Average Memory :                             408.42 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              37
+    Max Threads :                                1613
+    Run time :                                   9895 sec.
+    Turnaround time :                            9895 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 4992.05736 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 2489.47238 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 1251.87288 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 637.38895 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 330.64924 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Dolphin. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M6 <-> M1: 15.717249
+MPI M6 <-> M2: 18.627377
+MPI M6 <-> M3: 6.705207
+MPI M6 <-> M4: 30.326366
+MPI M6 <-> M5: 19.365057
+MPI M6 <-> M7: 14.009863
+MPI M6 <-> M8: 12.783826
+MPI M6 <-> M9: 19.916284
+MPI M6 <-> M10: 22.812948
+MPI M6 <-> M11: 5.794676
+Parallel Elapsed Time: 181.62130 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872742: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 18:09:46 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 18:09:47 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 18:09:47 2022
+Terminated at Wed Mar 16 19:00:22 2022
+Results reported at Wed Mar 16 19:00:22 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9685.08 sec.
+    Max Memory :                                 2373 MB
+    Average Memory :                             393.66 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              25
+    Max Threads :                                89
+    Run time :                                   3035 sec.
+    Turnaround time :                            3036 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 1528.09917 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 760.24554 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 384.14166 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 193.59109 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 102.10281 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Bull. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M7 <-> M1: 7.949918
+MPI M7 <-> M2: 10.534774
+MPI M7 <-> M3: 7.904030
+MPI M7 <-> M4: 21.746664
+MPI M7 <-> M5: 15.565144
+MPI M7 <-> M6: 14.009863
+MPI M7 <-> M8: 6.582345
+MPI M7 <-> M9: 6.772502
+MPI M7 <-> M10: 8.950250
+MPI M7 <-> M11: 10.982179
+Parallel Elapsed Time: 54.21205 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872743: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 20:20:49 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 20:20:49 2022
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 20:20:49 2022
+Terminated at Wed Mar 16 20:57:15 2022
+Results reported at Wed Mar 16 20:57:15 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   7066.89 sec.
+    Max Memory :                                 2359 MB
+    Average Memory :                             398.13 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              45
+    Max Threads :                                89
+    Run time :                                   2186 sec.
+    Turnaround time :                            2186 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 1091.72983 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 549.53050 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 278.34055 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 140.59107 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 72.71696 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Dog. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M8 <-> M1: 3.113645
+MPI M8 <-> M2: 6.196802
+MPI M8 <-> M3: 8.064584
+MPI M8 <-> M4: 18.150806
+MPI M8 <-> M5: 10.072918
+MPI M8 <-> M6: 12.783826
+MPI M8 <-> M7: 6.582345
+MPI M8 <-> M9: 9.508285
+MPI M8 <-> M10: 13.172770
+MPI M8 <-> M11: 12.330344
+Parallel Elapsed Time: 40.92808 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872744: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 21:58:50 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Mar 16 21:58:50 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Mar 16 21:58:50 2022
+Terminated at Thu Mar 17 00:58:51 2022
+Results reported at Thu Mar 17 00:58:51 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   18377.00 sec.
+    Max Memory :                                 512 MB
+    Average Memory :                             244.36 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              9
+    Max Threads :                                89
+    Run time :                                   10803 sec.
+    Turnaround time :                            10801 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 6185.42133 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 3143.55841 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 0 with PID 0 on node polus-c4-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c1-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872745: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 11:26:13 2022
+Job was executed on host(s) <20*polus-c1-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 11:26:14 2022
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Thu Mar 17 11:26:14 2022
+Terminated at Thu Mar 17 12:15:58 2022
+Results reported at Thu Mar 17 12:15:58 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+#mpiexec -n 1 python main.py
+#mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   25853.36 sec.
+    Max Memory :                                 3767 MB
+    Average Memory :                             1018.07 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              37
+    Max Threads :                                329
+    Run time :                                   2984 sec.
+    Turnaround time :                            2985 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 1558.13044 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 790.47395 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 406.64362 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Camel. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M9 <-> M1: 9.098317
+MPI M9 <-> M2: 9.586825
+MPI M9 <-> M3: 13.836763
+MPI M9 <-> M4: 18.257642
+MPI M9 <-> M5: 15.235411
+MPI M9 <-> M6: 19.916284
+MPI M9 <-> M7: 6.772502
+MPI M9 <-> M8: 9.508285
+MPI M9 <-> M10: 3.893904
+MPI M9 <-> M11: 16.919686
+Parallel Elapsed Time: 218.93725 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872746: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 12:53:16 2022
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 12:53:16 2022
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Thu Mar 17 12:53:16 2022
+Terminated at Thu Mar 17 15:53:16 2022
+Results reported at Thu Mar 17 15:53:16 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   21092.00 sec.
+    Max Memory :                                 976 MB
+    Average Memory :                             274.27 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              27
+    Max Threads :                                89
+    Run time :                                   10805 sec.
+    Turnaround time :                            10800 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 5918.13240 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 2992.46680 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 1484.01116 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 5 with PID 0 on node polus-c4-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c1-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872747: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;#mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;#mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 16:45:49 2022
+Job was executed on host(s) <20*polus-c1-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 16:45:50 2022
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Thu Mar 17 16:45:50 2022
+Terminated at Thu Mar 17 17:08:34 2022
+Results reported at Thu Mar 17 17:08:34 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+#mpiexec -n 1 python main.py
+#mpiexec -n 2 python main.py
+#mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   18829.39 sec.
+    Max Memory :                                 3766 MB
+    Average Memory :                             1573.94 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              37
+    Max Threads :                                649
+    Run time :                                   1366 sec.
+    Turnaround time :                            1365 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 754.23894 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 390.88560 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: Giraffe. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M10 <-> M1: 12.853278
+MPI M10 <-> M2: 13.231010
+MPI M10 <-> M3: 16.402566
+MPI M10 <-> M4: 20.360185
+MPI M10 <-> M5: 18.560316
+MPI M10 <-> M6: 22.812948
+MPI M10 <-> M7: 8.950250
+MPI M10 <-> M8: 13.172770
+MPI M10 <-> M9: 3.893904
+MPI M10 <-> M11: 19.180605
+Parallel Elapsed Time: 210.65417 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872748: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; mpiexec -n 1 python main.py;mpiexec -n 2 python main.py;mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 17:52:13 2022
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Mar 17 17:52:13 2022
+                            <12*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Thu Mar 17 17:52:13 2022
+Terminated at Thu Mar 17 20:52:13 2022
+Results reported at Thu Mar 17 20:52:13 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+mpiexec -n 1 python main.py
+mpiexec -n 2 python main.py
+mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   19387.00 sec.
+    Max Memory :                                 976 MB
+    Average Memory :                             256.99 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              13
+    Max Threads :                                89
+    Run time :                                   10802 sec.
+    Turnaround time :                            10800 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 6109.17392 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 3009.97332 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 1535.10089 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 3 with PID 0 on node polus-c3-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 872761: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;#mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q normal;#BSUB -W 03:00;#BSUB  -o result.out;#BSUB  -e result.err; #mpiexec -n 1 python main.py;#mpiexec -n 2 python main.py;#mpiexec -n 4 python main.py;mpiexec -n 8 python main.py;mpiexec -n 16 python main.py;mpiexec -n 32 python main.py;#mpiexec -n 64 python main.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Mar 18 11:54:18 2022
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <normal>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Mar 18 11:54:19 2022
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Mar 18 11:54:19 2022
+Terminated at Fri Mar 18 12:17:44 2022
+Results reported at Fri Mar 18 12:17:44 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q normal
+#BSUB -W 03:00
+#BSUB  -o result.out
+#BSUB  -e result.err
+
+#mpiexec -n 1 python main.py
+#mpiexec -n 2 python main.py
+#mpiexec -n 4 python main.py
+mpiexec -n 8 python main.py
+mpiexec -n 16 python main.py
+mpiexec -n 32 python main.py
+#mpiexec -n 64 python main.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   19193.32 sec.
+    Max Memory :                                 3767 MB
+    Average Memory :                             1609.97 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              51
+    Max Threads :                                649
+    Run time :                                   1406 sec.
+    Turnaround time :                            1406 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 8          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 763.15341 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 400.87011 seconds.
+---------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Picked model: GoldenRetriever. Total model count: 11
+--------------------------------------------------------
+GoldenRetriever.stl with 9478 vertices is found and loaded!
+Wolf.stl with 1687 vertices is found and loaded!
+Horse.stl with 5538 vertices is found and loaded!
+Lion.stl with 301 vertices is found and loaded!
+Eagle.stl with 2135 vertices is found and loaded!
+Dolphin.stl with 7573 vertices is found and loaded!
+Bull.stl with 2087 vertices is found and loaded!
+Dog.stl with 1480 vertices is found and loaded!
+Camel.stl with 9757 vertices is found and loaded!
+Giraffe.stl with 9239 vertices is found and loaded!
+Human.stl with 10050 vertices is found and loaded!
+---------------------   PARALLEL   ---------------------
+MPI M1 <-> M2: 3.708501
+MPI M1 <-> M3: 11.017976
+MPI M1 <-> M4: 15.069315
+MPI M1 <-> M5: 8.810160
+MPI M1 <-> M6: 15.717249
+MPI M1 <-> M7: 7.949918
+MPI M1 <-> M8: 3.113645
+MPI M1 <-> M9: 9.098317
+MPI M1 <-> M10: 12.853278
+MPI M1 <-> M11: 15.432489
+Parallel Elapsed Time: 214.18790 seconds.
+---------------------------------------------------
+
+
+PS:
+
+Read file <result.err> for stderr output of this job.
+
