@@ -22,6 +22,9 @@
 *.gz
 *.css
 
+#Unrelated
+filenameparser.py
+
 #Directories
 /Modules/*
 */Models/off
@@ -33,5 +36,6 @@
 */MyPy*/*
 *.vscode/*
 *tempCodeRunner*
+results/dosyalar
 FaceScape
 FLAME
