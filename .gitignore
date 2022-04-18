@@ -36,6 +36,6 @@ filenameparser.py
 */MyPy*/*
 *.vscode/*
 *tempCodeRunner*
-results/dosyalar
+results_dosyalar
 FaceScape
 FLAME
