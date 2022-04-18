@@ -17,6 +17,10 @@
 *.mp4
 *.zip
 *.txt
+*.htm
+*.xml
+*.gz
+*.css
 
 #Directories
 /Modules/*
@@ -29,3 +33,4 @@
 */MyPy*/*
 *.vscode/*
 *tempCodeRunner*
+FaceScape
