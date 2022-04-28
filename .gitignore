@@ -21,6 +21,7 @@
 *.xml
 *.gz
 *.css
+*.png
 
 #Unrelated
 filenameparser.py
