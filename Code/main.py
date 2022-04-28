@@ -1,3 +1,4 @@
+from copy import copy, deepcopy
 import os
 import numpy as np
 import sys
@@ -77,19 +78,18 @@ if __name__ == "__main__":
         dir = os.getcwd()
 
         models = [
-            "GoldenRetriever",
-            "Wolf",
-            "Horse",
-            "Lion",
-            "Eagle",
-            "Dolphin",
-            "Bull",
-            "Dog",
-            "Camel",
-            "Giraffe",
-            "Human",
+            "Cup1",
+            "Cup2",
+            "Darren",
+            "Eva",
+            "Helen",
+            "James",
+            "Joe",
+            "Kornelia",
+            "Nat",
         ]
-        fixed_model = models.index("GoldenRetriever")
+        models_names = copy(models)
+        fixed_model = models.index("Eva")
         print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
         print("--------------------------------------------------------")
 
@@ -97,10 +97,10 @@ if __name__ == "__main__":
 
         for i in range(len(models)):
             try:
-                if os.path.exists(dir + f"/Models/{models[i]}.stl"):
+                if os.path.exists(dir + f"/Models/Faces/{models[i]}.stl"):
                     print(f"{models[i]}.stl with", end="")
                     models[i] = trimesh.load(
-                        dir + f"/Models/{models[i]}.stl", force="mesh"
+                        dir + f"/Models/Faces/{models[i]}.stl", force="mesh"
                     )
                     print(
                         f" {models[i].vertices.shape[0]} vertices is found and loaded!"
@@ -168,7 +168,10 @@ if __name__ == "__main__":
         end = MPI.Wtime()
         for i in range(len(results)):
             if results[i] != 0:
-                print(f"MPI M{fixed_model+1} <-> M{i+1}: {results[i]:.6f}")
+                # print(f"MPI M{fixed_model+1} <-> M{i+1}: {results[i]:.6f}")
+                print(
+                    f"MPI {models_names[fixed_model]} <-> {models_names[i]}: {results[i]:.6f}"
+                )
         print(f"Parallel Elapsed Time: {end - start :.5f} seconds.")
         print("---------------------------------------------------")
     MPI.Finalize()
