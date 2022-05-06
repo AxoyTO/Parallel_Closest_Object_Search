@@ -1,8 +1,6 @@
 from copy import copy, deepcopy
-import os
+import os, time, re, random
 import numpy as np
-import sys
-import time
 import trimesh
 from hausdorff import *
 from scipy.spatial.distance import directed_hausdorff
@@ -12,36 +10,7 @@ import mpi4py
 mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
-
-def calculate_with_different_metrics(A, B):
-    print("=========================================")
-    print("Calculating Hausdorff Distance using different metrics")
-    print("=========================================")
-    start = time.time()
-    print(f"Euclidean HD: {NaiveHDD(A, B, Metrics.euclidean):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    start = time.time()
-    print(f"Manhattan HD: {NaiveHDD(A, B, Metrics.manhattan):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    start = time.time()
-    print(f"Chebyshev HD: {NaiveHDD(A, B, Metrics.chebyshev):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    start = time.time()
-    print(f"Minkowski HD: {NaiveHDD(A, B, distance.minkowski):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    start = time.time()
-    print(f"Canberra HD:    {NaiveHDD(A, B, distance.canberra):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    start = time.time()
-    print(f"Cosine HD:      {NaiveHDD(A, B, Metrics.cosine):.6f}", end="")
-    end = time.time()
-    print(f" ---- Time: {end - start :.5f} seconds.")
-    print("===========================")
+LOAD_OUTPUT = 0
 
 
 def execute_in_serial():
@@ -50,7 +19,7 @@ def execute_in_serial():
     for i in range(len(models)):
         if fixed_model != i:
             print(
-                f"Serial M{fixed_model+1} <-> M{i+1}: {max(NaiveHDD(models[fixed_model], models[i]), NaiveHDD(models[i], models[fixed_model])):.6f}"
+                f"Serial M{fixed_model+1} <-> M{i+1}: {max(EARLYBREAK(models[fixed_model], models[i]), EARLYBREAK(models[i], models[fixed_model])):.6f}"
             )
     end = time.time()
     print(f"Serial Elapsed Time: {end - start :.5f} seconds.")
@@ -76,47 +45,47 @@ if __name__ == "__main__":
         print(f"          WORLD SIZE: {world_size}          ")
         print("==================================")
         dir = os.getcwd()
+        models_dir = "/Models/MeshsegModels"
 
-        models = [
-            "Cup1",
-            "Cup2",
-            "Darren",
-            "Eva",
-            "Helen",
-            "James",
-            "Joe",
-            "Kornelia",
-            "Nat",
-        ]
+        find = re.compile(r"^[^.]*")
+
+        files = os.listdir(models_dir[1:])
+
+        models = [i[:-4] for i in files]
+
         models_names = copy(models)
-        fixed_model = models.index("Eva")
+        fixed_model = models.index(random.choice(models))
         print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
         print("--------------------------------------------------------")
 
         split = [0] * len(models)
 
         for i in range(len(models)):
+            # print(dir + f"{models_dir}/{models[i]}.off")
             try:
-                if os.path.exists(dir + f"/Models/Faces/{models[i]}.stl"):
-                    print(f"{models[i]}.stl with", end="")
+                if os.path.exists(dir + f"{models_dir}/{models[i]}.stl"):
+                    if LOAD_OUTPUT:
+                        print(f"{models[i]}.stl with", end="")
                     models[i] = trimesh.load(
-                        dir + f"/Models/Faces/{models[i]}.stl", force="mesh"
+                        dir + f"/{models_dir}/{models[i]}.stl", force="mesh"
                     )
-                    print(
-                        f" {models[i].vertices.shape[0]} vertices is found and loaded!"
-                    )
-                elif os.path.exists(dir + f"/Models/{models[i]}.off"):
-                    print(f"{models[i]}.off found and loaded!")
+                elif os.path.exists(dir + f"{models_dir}/{models[i]}.off"):
+                    if LOAD_OUTPUT:
+                        print(f"{models[i]}.off with", end="")
                     models[i] = trimesh.load(
-                        dir + f"/Models/{models[i]}.off", force="mesh"
+                        dir + f"/{models_dir}/{models[i]}.off", force="mesh"
                     )
                 else:
                     raise Exception
-
             except:
                 print(f"There is no file {models[i]} with extension .STL or .OFF!")
                 comm.Abort(1)
                 exit()
+            finally:
+                if LOAD_OUTPUT:
+                    print(
+                        f" {models[i].vertices.shape[0]} vertices is found and loaded!"
+                    )
 
         for i in range(len(models)):
             models[i] = np.array(models[i].vertices)
@@ -157,21 +126,24 @@ if __name__ == "__main__":
     results = [0] * len(models)
     for i in range(len(models)):
         if i != fixed_model:
-            result = comm.gather(NaiveHDD(split[i], models[fixed_model]), root=0)
+            result = comm.gather(EARLYBREAK(split[i], models[fixed_model]), root=0)
             if result != None:
                 directed_result = max(result)
-            result = comm.gather(NaiveHDD(split[fixed_model], models[i]), root=0)
+            result = comm.gather(EARLYBREAK(split[fixed_model], models[i]), root=0)
             if result != None:
                 results[i] = max(max(result), directed_result)
 
     if rank == 0:
         end = MPI.Wtime()
+        results_pair = {}
         for i in range(len(results)):
             if results[i] != 0:
                 # print(f"MPI M{fixed_model+1} <-> M{i+1}: {results[i]:.6f}")
                 print(
                     f"MPI {models_names[fixed_model]} <-> {models_names[i]}: {results[i]:.6f}"
                 )
+                results_pair[models_names[i]] = results[i]
         print(f"Parallel Elapsed Time: {end - start :.5f} seconds.")
+        print(min(results_pair, key=results_pair.get))
         print("---------------------------------------------------")
     MPI.Finalize()
