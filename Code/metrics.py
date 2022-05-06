@@ -2,6 +2,37 @@ import numpy as np
 from math import sqrt, asin, cos, sin
 
 
+def calculate_with_different_metrics(A, B):
+    print("=========================================")
+    print("Calculating Hausdorff Distance using different metrics")
+    print("=========================================")
+    start = time.time()
+    print(f"Euclidean HD: {NaiveHDD(A, B, Metrics.euclidean):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    start = time.time()
+    print(f"Manhattan HD: {NaiveHDD(A, B, Metrics.manhattan):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    start = time.time()
+    print(f"Chebyshev HD: {NaiveHDD(A, B, Metrics.chebyshev):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    start = time.time()
+    print(f"Minkowski HD: {NaiveHDD(A, B, distance.minkowski):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    start = time.time()
+    print(f"Canberra HD:    {NaiveHDD(A, B, distance.canberra):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    start = time.time()
+    print(f"Cosine HD:      {NaiveHDD(A, B, Metrics.cosine):.6f}", end="")
+    end = time.time()
+    print(f" ---- Time: {end - start :.5f} seconds.")
+    print("===========================")
+
+
 class Metrics:
     @staticmethod
     def manhattan(array_x, array_y):
