@@ -28,6 +28,7 @@ filenameparser.py
 
 #Directories
 /Modules/*
+*/Models
 */Models/off
 */Models/original
 */MPI_Tests
