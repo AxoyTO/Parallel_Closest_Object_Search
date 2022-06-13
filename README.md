@@ -1,2 +1,2 @@
-# Parallel_Hausdorff_Distance
+# Parallel Hausdorff Distance
 *A better readme will be here soon!*
