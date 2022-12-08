@@ -1,7 +1,6 @@
-from copy import copy, deepcopy
+from copy import copy
 import os
 import time
-import re
 import random
 import numpy as np
 import trimesh
@@ -49,8 +48,6 @@ if __name__ == "__main__":
         print("==================================")
         dir = os.getcwd()
         models_dir = "/Models/HighPoly/Tmp"
-
-        #find = re.compile(r"^[^.]*")
 
         files = os.listdir(models_dir[1:])
 
