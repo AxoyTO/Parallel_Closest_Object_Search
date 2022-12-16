@@ -178,5 +178,6 @@ if __name__ == "__main__":
     MPI.Finalize()
 
 
+# TODO: add timer (MPI.Wtime())
 # TODO: for serial code(1 process)
 # TODO: gracefully exit(no abort) if model file is not found
