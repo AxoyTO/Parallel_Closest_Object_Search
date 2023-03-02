@@ -13,7 +13,7 @@ import mpi4py
 mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
-LOAD_OUTPUT = 1
+LOAD_OUTPUT = 0
 
 
 def execute_in_serial():
@@ -48,19 +48,18 @@ if __name__ == "__main__":
         print(f"          WORLD SIZE: {world_size}          ")
         print("==================================")
         dir = os.getcwd()
-        models_dir = "/Models/HighPoly/Tmp"
+        models_dir = "/Models/Faces"
 
-        #find = re.compile(r"^[^.]*")
+        # find = re.compile(r"^[^.]*")
 
         files = os.listdir(models_dir[1:])
 
-        models = [i[:-4]
-                  for i in files if i.endswith(('.stl', '.STL', '.off', '.OFF'))]
+        models = [i[:-4] for i in files if i.endswith((".stl", ".STL", ".off", ".OFF"))]
 
         models_names = copy(models)
-        fixed_model = models.index(random.choice(models))
-        print(
-            f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
+        # fixed_model = models.index(random.choice(models))
+        fixed_model = models.index("James")
+        print(f"Picked model: {models[fixed_model]}. Total model count: {len(models)}")
         print("--------------------------------------------------------")
 
         split = [0] * len(models)
@@ -83,8 +82,7 @@ if __name__ == "__main__":
                 else:
                     raise Exception
             except:
-                print(
-                    f"There is no file {models[i]} with extension .STL or .OFF!")
+                print(f"There is no file {models[i]} with extension .STL or .OFF!")
                 comm.Abort(1)
                 exit()
             finally:
@@ -132,12 +130,10 @@ if __name__ == "__main__":
     results = [0] * len(models)
     for i in range(len(models)):
         if i != fixed_model:
-            result = comm.gather(EARLYBREAK(
-                split[i], models[fixed_model]), root=0)
+            result = comm.gather(EARLYBREAK(split[i], models[fixed_model]), root=0)
             if result != None:
                 directed_result = max(result)
-            result = comm.gather(EARLYBREAK(
-                split[fixed_model], models[i]), root=0)
+            result = comm.gather(EARLYBREAK(split[fixed_model], models[i]), root=0)
             if result != None:
                 results[i] = max(max(result), directed_result)
 

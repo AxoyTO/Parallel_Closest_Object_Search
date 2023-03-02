@@ -7,7 +7,6 @@ import numpy as np
 import trimesh
 from hausdorff import *
 from scipy.spatial.distance import directed_hausdorff
-from scipy.spatial import distance
 import mpi4py
 
 mpi4py.rc(initialize=False, finalize=False)
@@ -142,6 +141,7 @@ if __name__ == "__main__":
         models[i] = np.array(models[i].vertices)
 
     if rank == 0:
+        print("==================================")
         fixed_model = models[0]
         fixed_model_name = models_names[0]
     else:
@@ -178,7 +178,11 @@ if __name__ == "__main__":
     MPI.Finalize()
 
 
-# TODO: change scipy hausdorff to custom hausdorff 
+# TODO: change scipy hausdorff to custom hausdorff
 # TODO: add timer (MPI.Wtime())
 # TODO: for serial code(1 process)
 # TODO: gracefully exit(no abort) if model file is not found
+# TODO: process pool for parallel code
+# TODO: balance vertices
+# TODO: write text
+# TODO: more models
