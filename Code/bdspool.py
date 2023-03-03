@@ -90,9 +90,9 @@ if __name__ == "__main__":
 
         start = MPI.Wtime()
         if world_size > 1:
-            fixed_model = models.pop(fixed_model_index)
+            fixed_model_name = models.pop(fixed_model_index)
             for i in range(1, world_size):
-                comm.send(fixed_model, dest=i, tag=i)  # Send fixed_model to other processes
+                comm.send(fixed_model_name, dest=i, tag=i)  # Send fixed_model to other processes
 
                 #print_flushed(f"Process {rank} sent {fixed_model} to process {i}.")
                 #print_flushed(f"Process {rank} sent {models} to process {i}.")
@@ -115,7 +115,7 @@ if __name__ == "__main__":
         #print_flushed(f"Process {rank} has models: {models}.")
         
     #comm.barrier()
-    MPI.Finalize()
+    #MPI.Finalize()
     while True:
         # Request model from process 0
         if rank == 0:
@@ -131,6 +131,7 @@ if __name__ == "__main__":
             else:
                 for i in range(1, world_size):
                     comm.send(None, dest=i, tag=i)
+                break
         else:
             # Send rank to process 0 to request a model
             comm.send(rank, dest=0, tag=rank)
@@ -145,19 +146,14 @@ if __name__ == "__main__":
                 break
             
             model = load_model_by_name(model_name)
+            #results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
             results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
-            print_flushed(f"Process {rank} calculated hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
-            
-            # Do something with element here
-            #my_result = model * rank
-            #print(f"Process {rank} picked element {model_name}")
-    
+            print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
+    0
     #print(f"Process {rank} has results: {results_dict}")
     
-    #comm.barrier()
     res = comm.gather(results_dict, root=0)
     if rank == 0:
-        print(rank, res)
         end = MPI.Wtime()
         for i in res:
             if len(i):
@@ -168,20 +164,11 @@ if __name__ == "__main__":
                 f"Closest model to {fixed_model_name} is {min(results_dict, key=results_dict.get)}"
             )
             print(f"Parallel Search Time: {end - start :.5f} seconds.")
-
-    del model
-    del results_dict
+    
     MPI.Finalize()
 
-    #if rank == 0:
-        #MPI.Finalize()
-    
-    # print(fixed_model, models)
-    #models_names = copy(models)
-
 # TODO: change scipy hausdorff to custom hausdorff
-# TODO: for serial code(1 process)
-# TODO: gracefully exit(no abort) if model file is not found
-# TODO: process pool for parallel code
-# TODO: write text
-# TODO: more models
+# TODO: для 1 процесса
+# TODO: писать текст
+# TODO: больше моделей
+# TODO: запускать на POLUS
