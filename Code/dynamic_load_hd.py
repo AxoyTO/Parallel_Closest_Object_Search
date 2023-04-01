@@ -14,7 +14,7 @@ LOAD_OUTPUT = 0
 RESULT_OUTPUT = 0
 METHOD = 'EARLYBREAK'
 
-if METHOD == 'KDTREE':
+if METHOD == 'SCIPY_DH':
     sys.setrecursionlimit(10000)
 
 def load_model_by_name(model_name):
@@ -67,15 +67,15 @@ def receive_model_and_calculate_distance():
     
 def calculate_distance(model_name):
         model = load_model_by_name(model_name)
-        if METHOD == 'SCIPY_DIRECTED_HAUSDORFF':
-            results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
+        if METHOD == 'SCIPY_DH':
+            results_dict[model_name], _, _ = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))
         elif METHOD == 'EARLYBREAK':
             results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
         elif METHOD == 'NAIVEHDD':
             results_dict[model_name] = max(NaiveHDD(fixed_model, model),NaiveHDD(model, fixed_model))
         elif METHOD == 'KDTREE':
-            results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
-        #print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
+            results_dict[model_name] = max(KDTree_Query(fixed_model, model),KDTree_Query(model, fixed_model))
+        print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
 
 if __name__ == "__main__":
     MPI.Init()
@@ -88,7 +88,7 @@ if __name__ == "__main__":
     print_flushed = partial(print, flush=True)
 
     models_dir = "/ModelSet"
-    models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[:100]
+    models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[:15]
 
     if rank == 0:
         print_flushed("==================================")
@@ -98,7 +98,7 @@ if __name__ == "__main__":
         print_flushed(f"Total model count: {len(models)}")
         #print_flushed(models)
 
-        fixed_model_index = models.index('airplane_0003')
+        fixed_model_index = models.index('airplane_0627')
         print_flushed(f"Process {rank} picked model: {models[fixed_model_index]}.")
         print_flushed("==================================")
         fixed_model_name = models[fixed_model_index]
