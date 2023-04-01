@@ -1,6 +1,7 @@
 import numpy as np
 from metrics import Metrics
 from scipy.spatial import KDTree
+from scipy.spatial.distance import directed_hausdorff
 
 def NaiveHDD(model_a, model_b, distance_function=Metrics.euclidean):
     distances_list = []
@@ -31,14 +32,11 @@ def EARLYBREAK(model_a, model_b, distance_function=Metrics.euclidean):
     return cmax
 
 
-def KDTree_Hausdorff(model1, model2):
-    # Находим ближайшую точку второй модели для каждой точки первой модели
+def KDTree_Query(model1, model2):
     tree = KDTree(model2)
     dist_1, _ = tree.query(model1)
     
-    # Находим ближайшую точку первой модели для каждой точки второй модели
     tree = KDTree(model1)
     dist_2, _ = tree.query(model2)
     
-    # Максимальное расстояние среди всех точек
     return np.max([np.max(dist_1), np.max(dist_2)])
