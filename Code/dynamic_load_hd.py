@@ -1,19 +1,21 @@
 from functools import partial
-from multiprocessing import Process
-import time
+#import multiprocessing as mp
 import os
 import random
-import numpy as np
 import trimesh
 from hausdorff import *
-from scipy.spatial.distance import directed_hausdorff
 import mpi4py
+import sys
 
 mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
 LOAD_OUTPUT = 0
 RESULT_OUTPUT = 0
+METHOD = 'EARLYBREAK'
+
+if METHOD == 'KDTREE':
+    sys.setrecursionlimit(10000)
 
 def load_model_by_name(model_name):
         dir = os.getcwd()
@@ -43,32 +45,37 @@ def load_model_by_name(model_name):
             return np.array(model.vertices)
 
 def control_requests():
-    probe = comm.iprobe(source=MPI.ANY_SOURCE, tag=MPI.ANY_TAG)
-    if probe:
+    while len(models) > 0:
         destination = comm.recv()
-        print_flushed(f"Process {rank} received request from {destination}")
+        #print_flushed(f"Process {rank} received request from {destination}")
         model_index = models.index(random.choice(models))
         model_name = models.pop(model_index)
         comm.send(model_name, dest=destination, tag=destination)
+    else:
+        for i in range(1, world_size):
+            comm.send(None, dest=i, tag=i)
 
 def receive_model_and_calculate_distance():
     #print_flushed(f"Process {rank} is ready to receive model")
-    model_name = comm.sendrecv(rank, dest=0, source = 0, sendtag=rank, recvtag=rank)
+    while True:
+        model_name = comm.sendrecv(rank, dest=0, source = 0, sendtag=rank, recvtag=rank)
 
-    if model_name is None:
-        return 0
+        if model_name is None:
+            break
         
-    calculate_distance(model_name)
+        calculate_distance(model_name)
     
 def calculate_distance(model_name):
         model = load_model_by_name(model_name)
-        results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
-        #results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
-        #results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
-        print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
-
-def just_do():
-    print_flushed("child says hi")
+        if METHOD == 'SCIPY_DIRECTED_HAUSDORFF':
+            results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
+        elif METHOD == 'EARLYBREAK':
+            results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
+        elif METHOD == 'NAIVEHDD':
+            results_dict[model_name] = max(NaiveHDD(fixed_model, model),NaiveHDD(model, fixed_model))
+        elif METHOD == 'KDTREE':
+            results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
+        #print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
 
 if __name__ == "__main__":
     MPI.Init()
@@ -81,53 +88,44 @@ if __name__ == "__main__":
     print_flushed = partial(print, flush=True)
 
     models_dir = "/ModelSet"
-    models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:10]
+    models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[:100]
 
     if rank == 0:
         print_flushed("==================================")
         print_flushed(f"          WORLD SIZE: {world_size}          ")
         print_flushed("==================================")
+        print_flushed(f"Chosen method: {METHOD}")
         print_flushed(f"Total model count: {len(models)}")
         #print_flushed(models)
 
         fixed_model_index = models.index('airplane_0003')
         print_flushed(f"Process {rank} picked model: {models[fixed_model_index]}.")
         print_flushed("==================================")
-        fixed_model_name = models.pop(fixed_model_index)
-        fixed_model = load_model_by_name(fixed_model_name)
-
+        fixed_model_name = models[fixed_model_index]
         start = MPI.Wtime()
-        if world_size > 1:
-            for i in range(1, world_size):
-                comm.send(fixed_model_name, dest=i, tag=i)
-
     else:
-        fixed_model_name = comm.recv(source=0)
-        models.pop(models.index(fixed_model_name))
-        fixed_model = load_model_by_name(fixed_model_name)
+        fixed_model_name = None
+
+    
+    fixed_model_name = comm.bcast(fixed_model_name, root = 0)
+    models.pop(models.index(fixed_model_name))
+    fixed_model = load_model_by_name(fixed_model_name)
+
         
-        
-    while True and world_size > 1:
+    if world_size > 1:
         if rank == 0:
-            p1 = Process(target=just_do)
-            if len(models)> 0:
-                control_requests()
-                #p1.start()
-            else:
-                #p1.join()
-                for i in range(1, world_size):
-                    comm.send(None, dest=i, tag=i)
-                break
-                
+            #p1 = mp.Process(target = control_requests)
+            #p1.start()
+            #p1.join()
+            control_requests()
         else:
-            result = receive_model_and_calculate_distance()
-            if result != 0:
-                pass
-            else:
-                break
+            receive_model_and_calculate_distance()
+
+    #print_flushed(f"{rank} finished")
 
     if world_size > 1:
         res = comm.gather(results_dict, root=0)
+        #print_flushed(f"{rank} passed")
     else:
         res = []
         model_name = models
@@ -143,9 +141,7 @@ if __name__ == "__main__":
                 for k, v in i.items():
                     results_dict[k] = v
         if len(results_dict):            
-            print_flushed(
-                f"Closest model to {fixed_model_name} is {min(results_dict, key=results_dict.get)}"
-            )
-            print(f"Parallel Search Time: {end - start :.5f} seconds.")
+            print_flushed(f"Closest model to {fixed_model_name} is {min(results_dict, key=results_dict.get)}")
+            print_flushed(f"Parallel Search Time: {end - start :.5f} seconds.")
     
     MPI.Finalize()
