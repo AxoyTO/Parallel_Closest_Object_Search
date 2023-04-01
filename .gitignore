@@ -30,6 +30,7 @@ filenameparser.py
 /Modules/*
 */Models
 */ModelSet
+*/BigModelSet
 */Models/off
 */Models/original
 */MPI_Tests
