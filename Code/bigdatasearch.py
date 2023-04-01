@@ -46,12 +46,11 @@ if __name__ == "__main__":
 
     error = 0
     dir = os.getcwd()
-    models_dir = "/Models/Faces"
+    models_dir = "/ModelSet"
 
     if rank == 0:
 
-        files = os.listdir(models_dir[1:])
-        models = [i[:-4] for i in files if i.endswith((".stl", ".STL", ".off", ".OFF"))]
+        models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:32]
 
         if len(models) < world_size:
             error = 1

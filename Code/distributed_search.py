@@ -12,6 +12,7 @@ mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
 LOAD_OUTPUT = 0
+METHOD = 'SCIPY_DIRECTED_HAUSDORFF'
 
 def load_model_by_name(model_name):
         dir = os.getcwd()
@@ -42,10 +43,15 @@ def load_model_by_name(model_name):
 
 def calculate_distance(model_name):
         model = load_model_by_name(model_name)
-        results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
-        #results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
-        #results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
-        #print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
+        if METHOD == 'SCIPY_DIRECTED_HAUSDORFF':
+            results_dict[model_name] = max(directed_hausdorff(fixed_model, model),directed_hausdorff(model, fixed_model))[0]
+        elif METHOD == 'EARLYBREAK':
+            results_dict[model_name] = max(EARLYBREAK(fixed_model, model),EARLYBREAK(model, fixed_model))
+        elif METHOD == 'NAIVEHDD':
+            results_dict[model_name] = max(NaiveHDD(fixed_model, model),NaiveHDD(model, fixed_model))
+        elif METHOD == 'KDTREE':
+            results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
+        print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
 
 
 if __name__ == "__main__":
@@ -74,7 +80,7 @@ if __name__ == "__main__":
         splits = np.array(models, dtype=object)
         splits = np.array_split(splits, (world_size))
         models = splits[0]
-
+    
         start = MPI.Wtime()
         for i in range(1, world_size):
             comm.send(fixed_model_name, dest=i, tag=1)
