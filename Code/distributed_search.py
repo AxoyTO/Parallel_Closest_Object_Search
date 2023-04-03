@@ -50,8 +50,8 @@ def calculate_distance(model_name):
         elif METHOD == 'NAIVEHDD':
             results_dict[model_name] = max(NaiveHDD(fixed_model, model),NaiveHDD(model, fixed_model))
         elif METHOD == 'KDTREE':
-            results_dict[model_name] = max(KDTree_Hausdorff(fixed_model, model),KDTree_Hausdorff(model, fixed_model))
-        print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
+            results_dict[model_name] = max(KDTree_Query(fixed_model, model),KDTree_Query(model, fixed_model))
+        #print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
 
 
 if __name__ == "__main__":
@@ -64,17 +64,18 @@ if __name__ == "__main__":
     models_dir = "/ModelSet"
 
     if rank == 0:
+        models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}]
+
         print_flushed("==================================")
         print_flushed(f"          WORLD SIZE: {world_size}          ")
         print_flushed("==================================")
-        
-        models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}]
+        print_flushed(f"Chosen method: {METHOD}")
+        print_flushed(f"Total model count: {len(models)}")
+        print_flushed("--------------------------------------------------------")
 
         models_names = copy(models)
         # fixed_model = models.index(random.choice(models))
-        fixed_model_index = models.index("airplane_0003")
-        print_flushed(f"Picked model: {models[fixed_model_index]}. Total model count: {len(models)}")
-        print_flushed("--------------------------------------------------------")
+        fixed_model_index = models.index("airplane_0627")
         fixed_model_name = models.pop(fixed_model_index)
 
         splits = np.array(models, dtype=object)
