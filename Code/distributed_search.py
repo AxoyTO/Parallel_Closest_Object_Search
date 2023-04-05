@@ -1,5 +1,6 @@
 from copy import copy, deepcopy
 import os
+import sys
 from functools import partial
 import time
 import numpy as np
@@ -13,6 +14,9 @@ from mpi4py import MPI
 
 LOAD_OUTPUT = 0
 METHOD = 'SCIPY_DIRECTED_HAUSDORFF'
+
+if METHOD == 'KDTREE':
+    sys.setrecursionlimit(10000)
 
 def load_model_by_name(model_name):
         dir = os.getcwd()
