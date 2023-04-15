@@ -10,15 +10,15 @@ void load_all_off_models(const std::string& directory,
 
   struct dirent* entry;
   int k = 0;
-  while ((entry = readdir(dir)) != NULL && k != 5) {
+  while ((entry = readdir(dir)) != NULL && k != 15) {
     std::string filename = entry->d_name;
     size_t ext_pos = filename.rfind(".off");
     if (ext_pos != std::string::npos && ext_pos + 4 == filename.size()) {
       std::string model_name = filename.substr(0, ext_pos);
       std::vector<Vertex> vertices;
       load_off_model(directory + "/" + filename, vertices);
-      std::cout << "Loaded " << model_name << " with " << vertices.size()
-                << " vertices from the OFF file" << std::endl;
+      // std::cout << "Loaded " << model_name << " with " << vertices.size()
+      //           << " vertices from the OFF file" << std::endl;
       models[model_name] = vertices;
       k++;
     }

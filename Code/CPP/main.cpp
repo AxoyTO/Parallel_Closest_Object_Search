@@ -1,37 +1,59 @@
+#include <cfloat>
 #include "hausdorff.hpp"
+#include "helper.hpp"
 #include "off_loader.hpp"
 #include "vertex.hpp"
 
 int main() {
-  std::string directory =
-      "C:/Users/toaxo/Desktop//MSU//4_1//Hausdorff//Code//ModelSet";
-  std::map<std::string, std::vector<Vertex>> models;
-  load_all_off_models(directory, models);
-
-  /*
-  std::string model_name = "airplane_0005";
-  if (models.find(model_name) != models.end()) {
-    const std::vector<Vertex>& vertices = models[model_name];
-    print_vertices(vertices);
+  std::string directory;
+  if (!set_directory(directory)) {
+    std::cout << "Directory \"" << directory << "\" is set." << std::endl;
   } else {
-    std::cerr << "Model not found: " << model_name << std::endl;
+    std::cout << "Models directory couldn't be set!" << std::endl;
+    return 1;
   }
-  */
+
+  std::map<std::string, std::vector<Vertex>> models;
+  std::map<std::string, double> results;
+  load_all_off_models(directory, models);
 
   std::cout << "Loaded " << models.size() << " OFF models from the directory"
             << std::endl;
 
-  std::string m1, m2;
-  m1 = get_name_of_model(models, 2);
-  m2 = get_name_of_model(models, 4);
-  const std::vector<Vertex>& model1_vertices = models.at(m1);
-  const std::vector<Vertex>& model2_vertices = models.at(m2);
-  std::cout << m1 << std::endl;
-  std::cout << m2 << std::endl;
-  // print_vertices(models.at(m1));
-  double distance =
-      earlybreak_hausdorff_distance(model1_vertices, model2_vertices);
-  std::cout << "Hausdorff distance: " << distance << std::endl;
+  std::string fixed_model_name;
+  fixed_model_name = get_name_of_model(models, 2);
+  const std::vector<Vertex>& fixed_model_vertices = models.at(fixed_model_name);
+  models.erase(fixed_model_name);
+  std::cout << " — Fixed model is: " << fixed_model_name << std::endl;
+
+  for (auto it = models.begin(); it != models.end(); it++) {
+    double distance =
+        earlybreak_hausdorff_distance(fixed_model_vertices, it->second);
+    results[it->first] = distance;
+  }
+
+  /*
+  for (auto& model : models) {
+    double distance =
+        earlybreak_hausdorff_distance(fixed_model_vertices, model.second);
+    results[model.first] = distance;
+  }
+  */
+
+  std::string closest_model;
+  double min_dist = results.begin()->second;
+
+  for (auto& res : results) {
+    std::cout << "Hausdorff distance between " << fixed_model_name << " and "
+              << res.first << " is: " << res.second << std::endl;
+    if (res.second < min_dist) {
+      min_dist = res.second;
+      closest_model = res.first;
+    }
+  }
+
+  std::cout << " — Closest model to " << fixed_model_name << " is "
+            << closest_model << std::endl;
 
   return 0;
 }
