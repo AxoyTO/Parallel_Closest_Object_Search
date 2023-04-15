@@ -1,5 +1,4 @@
 from functools import partial
-#import multiprocessing as mp
 import os
 import random
 import trimesh
@@ -12,7 +11,7 @@ from mpi4py import MPI
 
 LOAD_OUTPUT = 0
 RESULT_OUTPUT = 0
-METHOD = 'SCIPY_DH'
+METHOD = 'KDTREE'
 
 if METHOD == 'KDTREE':
     sys.setrecursionlimit(10000)
@@ -88,9 +87,10 @@ if __name__ == "__main__":
     print_flushed = partial(print, flush=True)
 
     models_dir = "/ModelSet"
-    models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])
 
     if rank == 0:
+        models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[0:15]
+        
         print_flushed("==================================")
         print_flushed(f"          WORLD SIZE: {world_size}          ")
         print_flushed("==================================")
@@ -102,30 +102,24 @@ if __name__ == "__main__":
         print_flushed(f"Process {rank} picked model: {models[fixed_model_index]}.")
         print_flushed("==================================")
         fixed_model_name = models[fixed_model_index]
+        models.pop(models.index(fixed_model_name))
+
         start = MPI.Wtime()
     else:
         fixed_model_name = None
 
     
     fixed_model_name = comm.bcast(fixed_model_name, root = 0)
-    models.pop(models.index(fixed_model_name))
     fixed_model = load_model_by_name(fixed_model_name)
-
         
     if world_size > 1:
         if rank == 0:
-            #p1 = mp.Process(target = control_requests)
-            #p1.start()
-            #p1.join()
             control_requests()
         else:
             receive_model_and_calculate_distance()
 
-    #print_flushed(f"{rank} finished")
-
     if world_size > 1:
         res = comm.gather(results_dict, root=0)
-        #print_flushed(f"{rank} passed")
     else:
         res = []
         model_name = models
