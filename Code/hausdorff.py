@@ -34,9 +34,9 @@ def EARLYBREAK(model_a, model_b, distance_function=Metrics.euclidean):
 
 def KDTree_Query(model1, model2):
     tree = KDTree(model2)
-    dist_1, _ = tree.query(model1)
+    dist_1, _ = tree.query(model1, workers=-1)
     
     tree = KDTree(model1)
-    dist_2, _ = tree.query(model2)
+    dist_2, _ = tree.query(model2, workers=-1)
     
     return np.max([np.max(dist_1), np.max(dist_2)])
