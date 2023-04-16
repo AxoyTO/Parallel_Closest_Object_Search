@@ -5,6 +5,7 @@ import mpi4py
 mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
+
 if __name__ == "__main__":
     MPI.Init()
     comm = MPI.COMM_WORLD
@@ -22,6 +23,7 @@ if __name__ == "__main__":
         print_flushed("-----------------------------------------------")
 
         models_names = copy(models)
+        models.pop(models.index(fixed_model_name))
 
         splits = np.array(models, dtype=object)
         splits = np.array_split(splits, (world_size))
