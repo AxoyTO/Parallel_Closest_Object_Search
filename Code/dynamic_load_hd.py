@@ -36,17 +36,8 @@ if __name__ == "__main__":
 
     if rank == 0:
         models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[0:5]
-        
-        print_flushed("==================================")
-        print_flushed(f"          WORLD SIZE: {world_size}          ")
-        print_flushed("==================================")
-        print_flushed(f"Chosen method: {METHOD}")
-        print_flushed(f"Total model count: {len(models)}")
-        print_flushed("-----------------------------------------------")
+        print_opening(world_size, len(models), fixed_model_name)
 
-        fixed_model_index = models.index('airplane_0627')
-        print_flushed(f"Process {rank} picked model: {models[fixed_model_index]}.")
-        print_flushed("==================================")
         models.pop(models.index(fixed_model_name))
 
         start = MPI.Wtime()

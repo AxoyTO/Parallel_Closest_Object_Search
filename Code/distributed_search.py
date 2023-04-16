@@ -14,13 +14,7 @@ if __name__ == "__main__":
 
     if rank == 0:
         models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:5]
-
-        print_flushed("==================================")
-        print_flushed(f"          WORLD SIZE: {world_size}          ")
-        print_flushed("==================================")
-        print_flushed(f"Chosen method: {METHOD}")
-        print_flushed(f"Total model count: {len(models)}")
-        print_flushed("-----------------------------------------------")
+        print_opening(world_size, len(models), fixed_model_name)
 
         models_names = copy(models)
         models.pop(models.index(fixed_model_name))
@@ -61,5 +55,4 @@ if __name__ == "__main__":
                 f"Closest model to {fixed_model_name} is {min(results_dict, key=results_dict.get)}"
             )
             print_flushed(f"Parallel Search Time: {end - start :.5f} seconds.")
-        print_flushed("---------------------------------------------------")
     MPI.Finalize()

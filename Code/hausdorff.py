@@ -32,8 +32,8 @@ def earlybreak(model_a, model_b, distance_function=Metrics.euclidean):
     return cmax
 
 def earlybreak_with_rs(model_a, model_b, distance_function=Metrics.euclidean, seed=0):
-    nA = model_a.shape[0] #N1
-    nB = model_b.shape[0] #N2
+    nA = model_a.shape[0]
+    nB = model_b.shape[0]
     data_dims = model_a.shape[1]
     rng = np.random.RandomState(seed)
     resort1 = np.arange(nA, dtype=np.int64)
