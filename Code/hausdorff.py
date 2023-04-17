@@ -14,7 +14,6 @@ def naivehdd(model_a, model_b, distance_function=Metrics.euclidean):
         distances_list.append(dist_min)
     return np.max(distances_list)
 
-
 def earlybreak(model_a, model_b, distance_function=Metrics.euclidean):
     nA = model_a.shape[0]
     nB = model_b.shape[0]
@@ -62,7 +61,6 @@ def earlybreak_with_rs(model_a, model_b, distance_function=Metrics.euclidean, se
 
 
     return cmax**(1/2)
-
 
 def kdtree_query(model1, model2):
     tree = KDTree(model2)
