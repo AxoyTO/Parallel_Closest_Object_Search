@@ -10,23 +10,18 @@ def load_model_by_name(model_name, comm):
             if LOAD_OUTPUT:
                 print(f"{model_name}.stl with", end="")
             model = trimesh.load(dir + f"/{models_dir}/{model_name}.stl", force="mesh")
-            
         elif os.path.exists(dir + f"{models_dir}/{model_name}.off"):
             if LOAD_OUTPUT:
                 print(f"{model_name}.off with", end="")
             model = trimesh.load(dir + f"/{models_dir}/{model_name}.off", force="mesh")
-
         else:
             raise Exception
     except:
-
         print_flushed(f"There is no file {model_name} with extension .STL or .OFF!")
         comm.Abort(1)
-
     finally:
-
         if LOAD_OUTPUT:
-            print_flushed(f" {model.vertices.shape[0]} vertices is found and loaded by process {rank}!")
+            print_flushed(f" {model.vertices.shape[0]} vertices is found and loaded by process {comm.Get_rank()}!")
         return np.array(model.vertices)
 
 def calculate_distance(fixed_model, model_name, comm):
