@@ -42,11 +42,14 @@ def calculate_distance(fixed_model, model_name, comm):
     elif METHOD == 'KDTREE':
         results_dict[model_name] = max(kdtree_query(fixed_model, model),kdtree_query(model, fixed_model))
 
-def print_opening(world_size, models_count, fixed_model_name):
+def print_opening(world_size, models_count, fixed_model_name, alg):
     print_flushed("==================================")
     print_flushed(f"          WORLD SIZE: {world_size}          ")
     print_flushed("==================================")
-    print_flushed(f"Chosen method: Dynamic Load Balancing — {METHOD}")
+    if alg == "DLB":
+        print_flushed(f"Chosen method: Dynamic Load Balancing — {METHOD}")
+    elif alg == "DS":
+        print_flushed(f"Chosen method: Static Distribution — {METHOD}")
     print_flushed(f"Total model count: {models_count}")
     print_flushed(f"Fixed model: {fixed_model_name}.")
     print_flushed("-----------------------------------------------")

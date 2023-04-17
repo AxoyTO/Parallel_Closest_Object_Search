@@ -5,7 +5,6 @@ import mpi4py
 mpi4py.rc(initialize=False, finalize=False)
 from mpi4py import MPI
 
-
 if __name__ == "__main__":
     MPI.Init()
     comm = MPI.COMM_WORLD
@@ -14,7 +13,7 @@ if __name__ == "__main__":
 
     if rank == 0:
         models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:5]
-        print_opening(world_size, len(models), fixed_model_name)
+        print_opening(world_size, len(models), fixed_model_name, "DS")
 
         models_names = copy(models)
         models.pop(models.index(fixed_model_name))

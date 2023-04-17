@@ -8,7 +8,6 @@ from mpi4py import MPI
 def control_requests():
     while len(models) > 0:
         destination = comm.recv()
-        #print_flushed(f"Process {rank} received request from {destination}")
         model_index = models.index(random.choice(models))
         model_name = models.pop(model_index)
         comm.send(model_name, dest=destination, tag=destination)
@@ -17,7 +16,6 @@ def control_requests():
             comm.send(None, dest=i, tag=i)
 
 def receive_model_and_calculate_distance():
-    #print_flushed(f"Process {rank} is ready to receive model")
     while True:
         model_name = comm.sendrecv(rank, dest=0, source = 0, sendtag=rank, recvtag=rank)
 
@@ -36,7 +34,7 @@ if __name__ == "__main__":
 
     if rank == 0:
         models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[0:5]
-        print_opening(world_size, len(models), fixed_model_name)
+        print_opening(world_size, len(models), fixed_model_name, "DLB")
 
         models.pop(models.index(fixed_model_name))
 
