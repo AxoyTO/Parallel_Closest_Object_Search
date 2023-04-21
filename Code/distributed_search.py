@@ -12,11 +12,11 @@ if __name__ == "__main__":
     rank = comm.Get_rank()
 
     if rank == 0:
-        models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:5]
+        models = [os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}]
         print_opening(world_size, len(models), fixed_model_name, "DS")
-
-        models_names = copy(models)
-        models.pop(models.index(fixed_model_name))
+        
+        if fixed_model_name in models:
+            models.pop(models.index(fixed_model_name))
 
         splits = np.array(models, dtype=object)
         splits = np.array_split(splits, (world_size))
@@ -31,8 +31,7 @@ if __name__ == "__main__":
         fixed_model_name = comm.recv(source=0, tag=1)
         models = comm.recv(source=0, tag=0)
 
-    for i in range(len(models)):
-        fixed_model = load_model_by_name(fixed_model_name, comm)
+    fixed_model = load_model_by_name(fixed_model_name, comm)
     
     for model in models:
         calculate_distance(fixed_model, model, comm)

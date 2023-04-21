@@ -23,8 +23,7 @@ def receive_model_and_calculate_distance():
             break
         
         calculate_distance(fixed_model, model_name, comm)
-        print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
-    
+        #print_flushed(f"Process {rank} calculated Hausdorff distance from {fixed_model_name} to {model_name}: {results_dict[model_name]:.6f}")
 
 if __name__ == "__main__":
     MPI.Init()
@@ -33,16 +32,16 @@ if __name__ == "__main__":
     rank = comm.Get_rank()
 
     if rank == 0:
-        models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[0:5]
+        models = sorted([os.path.splitext(i)[0] for i in os.listdir(models_dir[1:]) if os.path.splitext(i)[1].lower() in {".stl", ".off"}])
         print_opening(world_size, len(models), fixed_model_name, "DLB")
 
-        models.pop(models.index(fixed_model_name))
+        if fixed_model_name in models:
+            models.pop(models.index(fixed_model_name))
 
         start = MPI.Wtime()
     else:
         fixed_model_name = None
 
-    
     fixed_model_name = comm.bcast(fixed_model_name, root = 0)
     fixed_model = load_model_by_name(fixed_model_name, comm)
         
@@ -52,7 +51,6 @@ if __name__ == "__main__":
         else:
             receive_model_and_calculate_distance()
 
-    if world_size > 1:
         res = comm.gather(results_dict, root=0)
     else:
         res = []
