@@ -4,15 +4,16 @@ from scipy.spatial import KDTree
 from scipy.spatial.distance import directed_hausdorff
 
 def naivehdd(model_a, model_b, distance_function=Metrics.euclidean):
-    distances_list = []
+    cmax = 0.0
     for i in range(len(model_a)):
-        dist_min = np.inf
+        cmin = np.inf
         for j in range(len(model_b)):
-            dist = distance_function(model_a[i], model_b[j])
-            if dist_min > dist:
-                dist_min = dist
-        distances_list.append(dist_min)
-    return np.max(distances_list)
+            d = distance_function(model_a[i], model_b[j])
+            if d < cmin:
+                cmin = d
+        if cmax < cmin:
+            cmax = cmin
+    return cmax
 
 def earlybreak(model_a, model_b, distance_function=Metrics.euclidean):
     nA = model_a.shape[0]
