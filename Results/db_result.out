@@ -1,0 +1,2183 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1039352: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 12:44:40 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 12:44:40 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Mon Apr  3 12:44:40 2023
+Terminated at Mon Apr  3 12:57:44 2023
+Results reported at Mon Apr  3 12:57:44 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2979.65 sec.
+    Max Memory :                                 3950 MB
+    Average Memory :                             656.63 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                333
+    Run time :                                   786 sec.
+    Turnaround time :                            784 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 241.56064 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 240.11038 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 120.68568 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 82.62166 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 36.25567 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 18.35776 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 18.97677 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 11.43719 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1039381: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 17:31:08 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 17:31:08 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Mon Apr  3 17:31:08 2023
+Terminated at Mon Apr  3 17:44:14 2023
+Results reported at Mon Apr  3 17:44:14 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   2988.82 sec.
+    Max Memory :                                 3671 MB
+    Average Memory :                             675.30 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                89
+    Run time :                                   793 sec.
+    Turnaround time :                            786 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 241.14058 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 242.50163 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 121.42854 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 81.78388 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 37.76546 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 18.93674 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 15.61022 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: SCIPY_DH
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 10.67607 seconds.
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 40 slots
+that were requested by the application:
+  python
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1039451: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 23:43:35 2023
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Mon Apr  3 23:52:26 2023
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Mon Apr  3 23:52:26 2023
+Terminated at Tue Apr  4 04:35:45 2023
+Results reported at Tue Apr  4 04:35:45 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   57125.00 sec.
+    Max Memory :                                 4499 MB
+    Average Memory :                             566.46 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              42
+    Max Threads :                                369
+    Run time :                                   16999 sec.
+    Turnaround time :                            17530 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 5250.97291 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 5249.03547 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 2651.36993 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 1753.80592 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 812.50081 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 526.17666 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 394.59856 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: EARLYBREAK
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 331.05085 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1039509: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Apr  4 10:43:51 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Tue Apr  4 10:43:51 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Tue Apr  4 10:43:51 2023
+Terminated at Tue Apr  4 10:44:13 2023
+Results reported at Tue Apr  4 10:44:13 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   399.00 sec.
+    Max Memory :                                 2009 MB
+    Average Memory :                             1233.40 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              20
+    Max Threads :                                57
+    Run time :                                   28 sec.
+    Turnaround time :                            22 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[54772,1],0]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[54530,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[54468,1],2]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[54061,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[53649,1],1]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[56977,1],14]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[55443,1],14]
+  Exit code:    1
+--------------------------------------------------------------------------
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+-------------------------------------------------------
+Primary job  terminated normally, but 1 process returned
+a non-zero exit code.. Per user-direction, the job has been aborted.
+-------------------------------------------------------
+--------------------------------------------------------------------------
+mpiexec detected that one or more processes exited with non-zero status, thus causing
+the job to be terminated. The first process to do so was:
+
+  Process name: [[8485,1],14]
+  Exit code:    1
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1039762: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Apr  5 01:05:25 2023
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Apr  5 01:05:25 2023
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Apr  5 01:05:25 2023
+Terminated at Wed Apr  5 13:05:26 2023
+Results reported at Wed Apr  5 13:05:26 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   71735.00 sec.
+    Max Memory :                                 809 MB
+    Average Memory :                             292.75 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                22
+    Run time :                                   43207 sec.
+    Turnaround time :                            43201 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 19197.23935 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 19494.90913 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 0 with PID 0 on node polus-c3-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1040310: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; #mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; #mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Apr  5 17:01:39 2023
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Wed Apr  5 17:20:20 2023
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Wed Apr  5 17:20:20 2023
+Terminated at Wed Apr  5 23:33:54 2023
+Results reported at Wed Apr  5 23:33:54 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+#mpiexec -n 1 python dynamic_load_hd.py
+#mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   143792.00 sec.
+    Max Memory :                                 4576 MB
+    Average Memory :                             1004.89 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              37
+    Max Threads :                                1293
+    Run time :                                   22413 sec.
+    Turnaround time :                            23535 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 9612.96736 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 6443.54189 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 2823.95608 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 1410.59507 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 1272.43743 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: KDTREE
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 837.25117 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1040767: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;#mpiexec -n 3 python dynamic_load_hd.py;#mpiexec -n 4 python dynamic_load_hd.py;#mpiexec -n 8 python dynamic_load_hd.py;#mpiexec -n 16 python dynamic_load_hd.py;#mpiexec -n 20 python dynamic_load_hd.py;#mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Exited
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;#mpiexec -n 3 python dynamic_load_hd.py;#mpiexec -n 4 python dynamic_load_hd.py;#mpiexec -n 8 python dynamic_load_hd.py;#mpiexec -n 16 python dynamic_load_hd.py;#mpiexec -n 20 python dynamic_load_hd.py;#mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Thu Apr  6 16:20:04 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr  7 00:09:32 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr  7 00:09:32 2023
+Terminated at Fri Apr  7 12:09:35 2023
+Results reported at Fri Apr  7 12:09:35 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+#mpiexec -n 2 python dynamic_load_hd.py
+#mpiexec -n 3 python dynamic_load_hd.py
+#mpiexec -n 4 python dynamic_load_hd.py
+#mpiexec -n 8 python dynamic_load_hd.py
+#mpiexec -n 16 python dynamic_load_hd.py
+#mpiexec -n 20 python dynamic_load_hd.py
+#mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+TERM_RUNLIMIT: job killed after reaching LSF run time limit.
+Exited with exit code 140.
+
+Resource usage summary:
+
+    CPU time :                                   43221.00 sec.
+    Max Memory :                                 226 MB
+    Average Memory :                             179.26 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                89
+    Run time :                                   43206 sec.
+    Turnaround time :                            71371 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: NAIVEHDD
+Total model count: 1000
+Process 0 picked model: airplane_0627.
+==================================
+--------------------------------------------------------------------------
+mpiexec noticed that process rank 0 with PID 0 on node polus-c4-ib exited on signal 12 (User defined signal 2).
+--------------------------------------------------------------------------
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1044836: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;#mpiexec -n 3 python dynamic_load_hd.py;#mpiexec -n 4 python dynamic_load_hd.py;#mpiexec -n 8 python dynamic_load_hd.py;#mpiexec -n 16 python dynamic_load_hd.py;#mpiexec -n 20 python dynamic_load_hd.py;#mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;#mpiexec -n 2 python dynamic_load_hd.py;#mpiexec -n 3 python dynamic_load_hd.py;#mpiexec -n 4 python dynamic_load_hd.py;#mpiexec -n 8 python dynamic_load_hd.py;#mpiexec -n 16 python dynamic_load_hd.py;#mpiexec -n 20 python dynamic_load_hd.py;#mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:15:34 2023
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:15:55 2023
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr 21 14:15:55 2023
+Terminated at Fri Apr 21 14:17:03 2023
+Results reported at Fri Apr 21 14:17:03 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+#mpiexec -n 2 python dynamic_load_hd.py
+#mpiexec -n 3 python dynamic_load_hd.py
+#mpiexec -n 4 python dynamic_load_hd.py
+#mpiexec -n 8 python dynamic_load_hd.py
+#mpiexec -n 16 python dynamic_load_hd.py
+#mpiexec -n 20 python dynamic_load_hd.py
+#mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   64.96 sec.
+    Max Memory :                                 563 MB
+    Average Memory :                             199.73 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              6
+    Max Threads :                                16
+    Run time :                                   67 sec.
+    Turnaround time :                            89 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 62.71563 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1044837: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:17:58 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:17:59 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr 21 14:17:59 2023
+Terminated at Fri Apr 21 14:21:35 2023
+Results reported at Fri Apr 21 14:21:35 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1064.00 sec.
+    Max Memory :                                 3616 MB
+    Average Memory :                             845.69 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                601
+    Run time :                                   217 sec.
+    Turnaround time :                            217 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 59.60378 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 58.97064 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 29.50331 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 21.79487 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 9.19973 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 6.21487 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 8.07989 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0675: 315.358105
+Process 26 calculated Hausdorff distance from airplane_0627 to airplane_0694: 5602.426797
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0726: 897.736540
+Process 26 calculated Hausdorff distance from airplane_0627 to airplane_0629: 959.712642
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0658: 897.791162
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0673: 30382.044975
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0645: 11792.861545
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0697: 1053.671410
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0638: 1459.887660
+Process 30 calculated Hausdorff distance from airplane_0627 to airplane_0664: 233.596277
+Process 25 calculated Hausdorff distance from airplane_0627 to airplane_0690: 939.537235
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0724: 31710.071922
+Process 29 calculated Hausdorff distance from airplane_0627 to airplane_0670: 1188.292845
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0687: 22354.800896
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0682: 673.139307
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0662: 794.509008
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0718: 2225.326209
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0714: 1033.419866
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0630: 1054.952484
+Process 23 calculated Hausdorff distance from airplane_0627 to airplane_0722: 2468.179107
+Process 24 calculated Hausdorff distance from airplane_0627 to airplane_0700: 1043.029923
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0653: 1632.874872
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0671: 862.653038
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0632: 741.797819
+Process 28 calculated Hausdorff distance from airplane_0627 to airplane_0707: 963.376937
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0672: 461.488191
+Process 25 calculated Hausdorff distance from airplane_0627 to airplane_0665: 577.902585
+Process 31 calculated Hausdorff distance from airplane_0627 to airplane_0702: 2161.444161
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0695: 1492.221643
+Process 21 calculated Hausdorff distance from airplane_0627 to airplane_0642: 2353.858112
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0721: 1652.817273
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0699: 1338.403757
+Process 20 calculated Hausdorff distance from airplane_0627 to airplane_0688: 962.958247
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0660: 3353.701075
+Process 22 calculated Hausdorff distance from airplane_0627 to airplane_0683: 8108.840796
+Process 29 calculated Hausdorff distance from airplane_0627 to airplane_0689: 1501.649285
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0669: 709.706742
+Process 25 calculated Hausdorff distance from airplane_0627 to airplane_0716: 939.537235
+Process 21 calculated Hausdorff distance from airplane_0627 to airplane_0661: 837.478409
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0684: 2186.343205
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0723: 783.119257
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0666: 1192.254992
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0634: 1468.165404
+Process 24 calculated Hausdorff distance from airplane_0627 to airplane_0696: 1886.379954
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0703: 1276.762657
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0631: 822.465591
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0713: 1614.766115
+Process 31 calculated Hausdorff distance from airplane_0627 to airplane_0704: 1426.138621
+Process 30 calculated Hausdorff distance from airplane_0627 to airplane_0709: 1747.451468
+Process 23 calculated Hausdorff distance from airplane_0627 to airplane_0654: 2468.797600
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0719: 2379.426204
+Process 20 calculated Hausdorff distance from airplane_0627 to airplane_0639: 3174.898038
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0635: 1034.906599
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0692: 1970.310617
+Process 28 calculated Hausdorff distance from airplane_0627 to airplane_0633: 2546.058709
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0637: 506.158776
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0651: 2242.985170
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0715: 933.919286
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0679: 982.117491
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0693: 437.113852
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0685: 2252.085889
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0659: 768.820699
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0674: 1875.108708
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0677: 8358.639324
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0678: 29920.505896
+Process 25 calculated Hausdorff distance from airplane_0627 to airplane_0667: 2407.949065
+Process 28 calculated Hausdorff distance from airplane_0627 to airplane_0701: 1288.599528
+Process 22 calculated Hausdorff distance from airplane_0627 to airplane_0640: 1761.240213
+Process 13 calculated Hausdorff distance from airplane_0627 to airplane_0636: 2173.748575
+Process 20 calculated Hausdorff distance from airplane_0627 to airplane_0644: 901.802077
+Process 27 calculated Hausdorff distance from airplane_0627 to airplane_0712: 196.037989
+Process 18 calculated Hausdorff distance from airplane_0627 to airplane_0717: 771.206339
+Process 4 calculated Hausdorff distance from airplane_0627 to airplane_0676: 926.624519
+Process 22 calculated Hausdorff distance from airplane_0627 to airplane_0708: 934.216813
+Process 17 calculated Hausdorff distance from airplane_0627 to airplane_0650: 1749.995278
+Process 21 calculated Hausdorff distance from airplane_0627 to airplane_0710: 1177.052048
+Process 24 calculated Hausdorff distance from airplane_0627 to airplane_0652: 1747.451468
+Process 2 calculated Hausdorff distance from airplane_0627 to airplane_0656: 978.227733
+Process 23 calculated Hausdorff distance from airplane_0627 to airplane_0646: 522.044396
+Process 31 calculated Hausdorff distance from airplane_0627 to airplane_0648: 1272.849762
+Process 1 calculated Hausdorff distance from airplane_0627 to airplane_0655: 2731.198691
+Process 9 calculated Hausdorff distance from airplane_0627 to airplane_0649: 1610.744773
+Process 15 calculated Hausdorff distance from airplane_0627 to airplane_0641: 882.232827
+Process 16 calculated Hausdorff distance from airplane_0627 to airplane_0725: 1026.034380
+Process 3 calculated Hausdorff distance from airplane_0627 to airplane_0711: 1635.412139
+Process 6 calculated Hausdorff distance from airplane_0627 to airplane_0705: 2161.444161
+Process 12 calculated Hausdorff distance from airplane_0627 to airplane_0668: 1926.497613
+Process 10 calculated Hausdorff distance from airplane_0627 to airplane_0680: 1576.637500
+Process 30 calculated Hausdorff distance from airplane_0627 to airplane_0681: 3302.771563
+Process 25 calculated Hausdorff distance from airplane_0627 to airplane_0657: 6538.668068
+Process 8 calculated Hausdorff distance from airplane_0627 to airplane_0720: 3650.380877
+Process 7 calculated Hausdorff distance from airplane_0627 to airplane_0663: 921.015154
+Process 5 calculated Hausdorff distance from airplane_0627 to airplane_0686: 1128.100429
+Process 26 calculated Hausdorff distance from airplane_0627 to airplane_0706: 2187.169558
+Process 14 calculated Hausdorff distance from airplane_0627 to airplane_0698: 703.956217
+Process 28 calculated Hausdorff distance from airplane_0627 to airplane_0643: 989.090875
+Process 29 calculated Hausdorff distance from airplane_0627 to airplane_0628: 857.090466
+Process 11 calculated Hausdorff distance from airplane_0627 to airplane_0647: 961.595287
+Process 19 calculated Hausdorff distance from airplane_0627 to airplane_0691: 1524.785340
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 8.15299 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1044844: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:46:23 2023
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:47:22 2023
+                            <12*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr 21 14:47:22 2023
+Terminated at Fri Apr 21 14:50:58 2023
+Results reported at Fri Apr 21 14:50:58 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   1026.64 sec.
+    Max Memory :                                 3083 MB
+    Average Memory :                             837.00 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2 MB
+    Max Processes :                              24
+    Max Threads :                                89
+    Run time :                                   219 sec.
+    Turnaround time :                            275 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 58.78556 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 59.70487 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 29.87657 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 20.48926 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 8.97968 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 7.66173 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 9.69672 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 100
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 6.42158 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1044845: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:58:06 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 14:58:06 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr 21 14:58:06 2023
+Terminated at Fri Apr 21 15:11:23 2023
+Results reported at Fri Apr 21 15:11:23 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   2986.89 sec.
+    Max Memory :                                 4177 MB
+    Average Memory :                             655.31 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              24
+    Max Threads :                                89
+    Run time :                                   797 sec.
+    Turnaround time :                            797 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 254.76017 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 240.58552 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 121.89729 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 81.30425 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 36.42041 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 21.06426 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 16.41335 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 1000
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0712
+Parallel Search Time: 9.96318 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 1044847: <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> in cluster <MSUCluster> Done
+
+Job <module load OpenMPI/2.1.3;module load Anaconda3/2019.07;source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh;conda activate;#BSUB -n 32 -q extended;#BSUB -W 12:00;#BSUB -o db_result.out;#BSUB -e db_result.err; mpiexec -n 1 python dynamic_load_hd.py;mpiexec -n 2 python dynamic_load_hd.py;mpiexec -n 3 python dynamic_load_hd.py;mpiexec -n 4 python dynamic_load_hd.py;mpiexec -n 8 python dynamic_load_hd.py;mpiexec -n 16 python dynamic_load_hd.py;mpiexec -n 20 python dynamic_load_hd.py;mpiexec -n 32 python dynamic_load_hd.py;#mpiexec -n 40 python dynamic_load_hd.py;#mpiexec -n 64 python dynamic_load_hd.py> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 16:04:58 2023
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <extended>, as user <edu-cmc-sqi21-19> in cluster <MSUCluster> at Fri Apr 21 16:04:58 2023
+                            <12*polus-c3-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19> was used as the home directory.
+</home_edu/edu-cmc-sqi21/edu-cmc-sqi21-19/HD> was used as the working directory.
+Started at Fri Apr 21 16:04:58 2023
+Terminated at Fri Apr 21 18:12:43 2023
+Results reported at Fri Apr 21 18:12:43 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+module load OpenMPI/2.1.3
+module load Anaconda3/2019.07
+source /polusfs/modules/anaconda/anaconda-3/etc/profile.d/conda.sh
+conda activate
+#BSUB -n 32 -q extended
+#BSUB -W 12:00
+#BSUB -o db_result.out
+#BSUB -e db_result.err
+
+mpiexec -n 1 python dynamic_load_hd.py
+mpiexec -n 2 python dynamic_load_hd.py
+mpiexec -n 3 python dynamic_load_hd.py
+mpiexec -n 4 python dynamic_load_hd.py
+mpiexec -n 8 python dynamic_load_hd.py
+mpiexec -n 16 python dynamic_load_hd.py
+mpiexec -n 20 python dynamic_load_hd.py
+mpiexec -n 32 python dynamic_load_hd.py
+#mpiexec -n 40 python dynamic_load_hd.py
+#mpiexec -n 64 python dynamic_load_hd.py
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   25299.00 sec.
+    Max Memory :                                 11054 MB
+    Average Memory :                             869.02 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   2 MB
+    Max Processes :                              45
+    Max Threads :                                1613
+    Run time :                                   7669 sec.
+    Turnaround time :                            7665 sec.
+
+The output (if any) follows:
+
+==================================
+          WORLD SIZE: 1          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 2315.36182 seconds.
+==================================
+          WORLD SIZE: 2          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 2420.39474 seconds.
+==================================
+          WORLD SIZE: 3          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 1206.62234 seconds.
+==================================
+          WORLD SIZE: 4          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 811.71176 seconds.
+==================================
+          WORLD SIZE: 8          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 356.67987 seconds.
+==================================
+          WORLD SIZE: 16          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 190.88708 seconds.
+==================================
+          WORLD SIZE: 20          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 165.41248 seconds.
+==================================
+          WORLD SIZE: 32          
+==================================
+Chosen method: Dynamic Load Balancing — SCIPY_DH
+Total model count: 12155
+Fixed model: airplane_0627.
+-----------------------------------------------
+Closest model to airplane_0627 is airplane_0308
+Parallel Search Time: 112.96194 seconds.
+
+
+PS:
+
+Read file <db_result.err> for stderr output of this job.
+
