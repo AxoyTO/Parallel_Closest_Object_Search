@@ -50,3 +50,7 @@ Code/.vscode/c_cpp_properties.json
 msu-diploma-axoyto/*
 Presentations
 Results
+SupervisorReview
+
+# Static files
+*/data.py
