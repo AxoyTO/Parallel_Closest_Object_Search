@@ -36,7 +36,8 @@ filenameparser.py
 */MPI_Tests
 */PyMesh
 /PDFs
-/Inter*
+*/Interactive Hausdorff Distance Calculation For General Polygonal Models/*
+*/PDFs/*
 */MyPy*/*
 *.vscode/*
 *tempCodeRunner*
@@ -54,4 +55,5 @@ SupervisorReview
 Algorithms
 
 # Static files
-*/data.py
+#
+.gitignore
