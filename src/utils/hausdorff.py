@@ -1,5 +1,5 @@
 import numpy as np
-from metrics import Metrics
+from utils.metrics import Metrics
 from scipy.spatial import KDTree
 from scipy.spatial.distance import directed_hausdorff
 
