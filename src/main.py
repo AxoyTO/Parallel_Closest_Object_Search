@@ -24,7 +24,7 @@ class DynamicLoad(ClosestObjectSearch):
     def start(self):
         if self.rank == 0:
             self.models = sorted([os.path.splitext(i)[0] for i in os.listdir(self.models_dir) 
-                                  if os.path.splitext(i)[1].lower() in {".stl", ".off"}])[:10]
+                                  if os.path.splitext(i)[1].lower() in {".stl", ".off"}])
             
             print_opening(self.world_size, len(self.models), self.fixed_model_name, "DLB")
 
@@ -89,7 +89,8 @@ class StaticLoad(ClosestObjectSearch):
 
     def start(self):
         if self.rank == 0:
-            models = [os.path.splitext(i)[0] for i in os.listdir(self.models_dir) if os.path.splitext(i)[1].lower() in {".stl", ".off"}][:5]
+            models = [os.path.splitext(i)[0] for i in os.listdir(self.models_dir) 
+                      if os.path.splitext(i)[1].lower() in {".stl", ".off"}]
             print_opening(self.world_size, len(models), self.fixed_model_name, "DS")
             
             if self.fixed_model_name in models:
