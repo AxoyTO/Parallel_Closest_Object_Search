@@ -1,4 +1,4 @@
-# Parallel Hausdorff Distance
+# Parallel Closest Obj Search
 https://www.researchgate.net/publication/371733465_Parallelnyj_algoritm_poiska_naibolee_blizkogo_obekta_v_kollekcii_poligonalnyh_modelej  
 *A better readme will be here soon!*
 
