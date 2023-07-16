@@ -10,4 +10,4 @@ https://www.researchgate.net/publication/371733465_Parallelnyj_algoritm_poiska_n
     -- 3rd parameter must be the filename of the model, distance of which to other models will be calculated.'  
 **For Example:**  
     $> mpiexec -n 12 python -m mpi4py main.py D C:models/ModelSet model_1.stl  
-    $> mpiexec -n 4 python -m mpi4py main.py S D:DataSet/Models airplane_0627.off
+    $> mpiexec -n 1000 python -m mpi4py main.py S D:DataSet/Models airplane_0627.off
